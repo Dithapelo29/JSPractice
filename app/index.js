@@ -1,14 +1,16 @@
-class Animal{
-    constructor(name,height) {
-        this.name = name;
-        this.height = height;
+import Animal from './animal';
+
+class Lion extends Animal {
+    constructor(name,height,color){
+        super(name,height);
+        this.color = color;
     }
 
     hello(){
-        console.log(`Hello, My name is ${this.name} with height ${this.height} from the animal kingdom`);
+        console.log(`Hi i'm ${this.name} with ${this.color} color from Birch Acres!`);
     }
 }
 
-let king = new Animal("Jack",4.5);
+let son = new Lion('Simba',2.8,'Brown');
 
-king.hello();
+son.hello();
