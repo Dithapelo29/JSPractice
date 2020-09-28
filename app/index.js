@@ -1,16 +1,17 @@
-import Animal from './animal';
+function Wizard(name,house,pet){
+    this.name = name;
+    this.house = house;
+    this.pet = pet;
 
-class Lion extends Animal {
-    constructor(name,height,color){
-        super(name,height);
-        this.color = color;
-    }
-
-    hello(){
-        console.log(`Hi i'm ${this.name} with ${this.color} color from Birch Acres!`);
-    }
+    this.greet = () => `Hi!! my name is ${this.name} from ${this.house}`;
 }
 
-let son = new Lion('Simba',2.8,'Brown');
+Wizard.prototype.pet_name;
+Wizard.prototype.info = function(){
+    return `Hi i am ${this.pet} named ${this.pet_name}`;
+}
+let harry = new Wizard('Jack','Sheffield','Dog');
 
-son.hello();
+harry.pet_name = "Sibi";
+
+console.log(harry.info());
