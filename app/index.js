@@ -1,7 +1,13 @@
-let numArr = [[1,'One'],[2,'Two'],[3,'Three']];
+let letters = 'qscrgnymlkmjhbygfcrdeszwsqazgasdfghjklqktgbuwnsvfdhj';
+let letVal = new Map();
 
-let numMap = new Map(numArr);
-
-for(let [key,val] of numMap.entries()){
-    console.log(`${key} => ${val}`);
+for(let i = 0;i< letters.length;i++){
+    let letter = letters[i];
+    if(!letVal.has(letter)){
+        letVal.set(letter,1);
+    }else{
+        letVal.set(letter,letVal.get(letter)+1);
+    }
 }
+
+console.log(letVal);
