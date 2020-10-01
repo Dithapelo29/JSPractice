@@ -1,17 +1,7 @@
-function Wizard(name,house,pet){
-    this.name = name;
-    this.house = house;
-    this.pet = pet;
+let numArr = [[1,'One'],[2,'Two'],[3,'Three']];
 
-    this.greet = () => `Hi!! my name is ${this.name} from ${this.house}`;
+let numMap = new Map(numArr);
+
+for(let [key,val] of numMap.entries()){
+    console.log(`${key} => ${val}`);
 }
-
-Wizard.prototype.pet_name;
-Wizard.prototype.info = function(){
-    return `Hi i am ${this.pet} named ${this.pet_name}`;
-}
-let harry = new Wizard('Jack','Sheffield','Dog');
-
-harry.pet_name = "Sibi";
-
-console.log(harry.info());
