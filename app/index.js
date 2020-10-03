@@ -1,6 +1,24 @@
-let product = (x) => y => y*x;
+let budget = ()=>{
+    let balance = 0;
 
-let mult5 = product(5);
-let multi = mult5(3);
+    let changeBal = (val)=>{
+        return balance += val;
+    }
 
-console.log(multi);
+    let deposit20 = () => changeBal(20);
+    let withdraw20 = () => changeBal(-20);
+    let check = ()=> balance;
+
+    return {
+        deposit20,check,withdraw20
+    }
+}
+
+let wallet = budget();
+wallet.deposit20();
+wallet.deposit20();
+wallet.deposit20();
+wallet.deposit20();
+wallet.withdraw20();
+
+console.log(wallet.check())
