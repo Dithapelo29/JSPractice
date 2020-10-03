@@ -1,13 +1,6 @@
-let letters = 'qscrgnymlkmjhbygfcrdeszwsqazgasdfghjklqktgbuwnsvfdhj';
-let letVal = new Map();
+let product = (x) => y => y*x;
 
-for(let i = 0;i< letters.length;i++){
-    let letter = letters[i];
-    if(!letVal.has(letter)){
-        letVal.set(letter,1);
-    }else{
-        letVal.set(letter,letVal.get(letter)+1);
-    }
-}
+let mult5 = product(5);
+let multi = mult5(3);
 
-console.log(letVal);
+console.log(multi);
